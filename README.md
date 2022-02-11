@@ -3,8 +3,8 @@
 Software Design Spring 2022
 
 Contributors: 
-Jessica Nguyen (1661857)
-Ngan Le (2001462)
+Jessica Nguyen (1661857),
+Ngan Le (2001462),
 Alejandro Gonzalez Perez (1896443)
 
 Goal of this software: 
