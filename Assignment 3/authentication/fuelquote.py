@@ -66,8 +66,8 @@ states_short = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA"
 
 # Data validation function
 def validate(gallons, address, date, price, amount_due):
-	if gallons <= 0:
-		raise Exception("Gallons must be a non-zero positive integer.")
+	if gallons <= 0.00 or type(gallons) != float:
+		raise Exception("Gallons must be a real number greater than zero.")
 	
 	a = address.split(", ")
 	if len(a) != 4:
@@ -117,7 +117,7 @@ def validate(gallons, address, date, price, amount_due):
 history = []
 
 # Example values, real data will be pulled from the database
-gallons = 30
+gallons = 30.00
 address = "3514 Hickory Street, Ogden, Utah, 84414"
 date = "2014-05-17"
 price = 42.50
