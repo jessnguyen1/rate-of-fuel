@@ -1,6 +1,6 @@
 from datetime import datetime
 
-class FuelHistory:
+class ClientProfileManagement:
 	def __init__(self, name, address, address2, city, state, zipcode):
 		self.name = name
 		self.address1 = address
