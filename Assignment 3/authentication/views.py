@@ -1,8 +1,9 @@
 from django.shortcuts import redirect,render
 from django.http import HttpResponse
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth import authenticate,login
+from django.contrib import messages
 from django.core.files import File
 
 
@@ -64,3 +65,24 @@ def client(request):
 
 
     return render(request,"authentication/client.html")
+
+def profilemanagement(request):
+    f = open("myfile.txt", "w")
+    
+    if request.method == "POST":
+        fullName = request.POST['name']
+        address1 = request.POST['address1']
+        address2 = request.POST['address2']
+        city = request.POST['city']
+        state = request.POST['state']
+        zipcode = request.POST['zipcode']
+        
+        f.write(fullName)
+        f.write(address1)
+        f.write(address2)
+        f.write(city)
+        f.write(state)
+        f.write(zipcode)
+        f.close()
+        
+    return render(request, 'authentication/Client Profile Management.html')
