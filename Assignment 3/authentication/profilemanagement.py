@@ -20,6 +20,9 @@ def validate(name, address, address2, city, state, zipcode):
 
 	if len(name) > 50 or len(name < 0):
 		raise Exception("Name length must not exceed 50 nor be empty.")
+	else: 
+		if type(name) != str:
+			raise Exception("Name must be string.")
   
 	if len(address1) > 100 or len(address1) < 0:
 		raise Exception("Address1 length must not exceed 100 nor be empty.")
