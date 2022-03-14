@@ -63,7 +63,6 @@ def client(request):
         f.write(zipcode)
         f.close()
 
-
     return render(request,"authentication/client.html")
 
 def profilemanagement(request):
@@ -77,12 +76,14 @@ def profilemanagement(request):
         state = request.POST['state']
         zipcode = request.POST['zipcode']
         
+        f.seek(0)
         f.write(fullName)
         f.write(address1)
         f.write(address2)
         f.write(city)
         f.write(state)
         f.write(zipcode)
+        f.truncate()
         f.close()
         
     return render(request, 'authentication/Client Profile Management.html')
