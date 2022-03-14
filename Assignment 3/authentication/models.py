@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Feature(models.Model):
-    id: models.CharField(max_length=50)
-    details: models.CharField(max_length=500)
+    name: models.CharField(max_length=50)
+    address1: models.CharField(max_length=100)
+    address2: models.CharField(max_length=100)
+    zipcode: models.CharField(min_length=5)
 
