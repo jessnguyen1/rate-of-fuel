@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuel Quote Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'system/style.css' %}" />
+  </head>
+  <body>
+    <div class="content">
+    <h2>Fuel history</h2>
+    
+    <table>
+      <tr>
+        <th>Gallons requested</th>
+        <th>Delivery address</th>
+        <th>Delivery date</th>
+        <th>Suggested price</th>
+        <th>Total amount due</th>
+      </tr>
+      <tr>
+        <td>No data yet</th>
+        <td>No data yet</th>
+        <td>No data yet</th>
+        <td>No data yet</th>
+        <td>No data yet</th>
+      </tr>
+    </table>
+    <a href="{% url 'Profile' %}">Return to profile</a>
+      <a href="{% url 'quote' %}">Return to Fuel Quote</a>
+       <div id="message"><h2><a href="{% url 'Logout' %}"> Logout</a></h2></div>
+    </div>
+  </body>
+</html>
